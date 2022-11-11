@@ -550,6 +550,7 @@ function recoverData() {
     peachPice.innerHTML = localStorage.getItem("peachPrice")
     document.getElementById("click-me").src = localStorage.getItem("clickMePic")
     upgradeCost.innerHTML = localStorage.getItem("upgradePrice")
+    alert("Loaded!")
 }
 
 function saveData() {
@@ -573,7 +574,7 @@ function saveData() {
     localStorage.setItem("peachPrice",peachPice.innerHTML)
     localStorage.setItem("clickMePic", document.getElementById("click-me").src)
     localStorage.setItem("upgradePrice",upgradeCost.innerHTML)
-    console.log("SAVED!")
+    alert("Data Saved")
 }
 
 function MpS_count() {
