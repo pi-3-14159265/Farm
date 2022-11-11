@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <h1 class="font">Your Money:</h1>
+        <h2 id="total-money" class="font">0</h2>
+        <form>
+						<button type="button" id="obj" class="borderless font" onclick='press()' ><img draggable="false" src="egg.png" id="click-me"></button>
+                        <h2 id="item-type" class="font">Egg</h2>
+						<button type="button" id="upgrade" onclick="upp()">Upgrade For <span id="upgrade-cost">10000</span></button>
+                        <br></br>
+						<table id="main">
+							<tr>
+								<th><h3 id="MpS-tag">Money Per Second: <span id="MpS">0</h3></th>
+							</tr>
+							<tr>
+								<td><button type="button" id="chic" onclick="buyChic()"><img draggable="false" src="chic.png">Buy Chiken For <span id="chic-price">100</span></button></td>
+								<td><h3 id="chic-own-tag">Chikens Owned: <span id="chic-own">0</span></h3></td>
+							</tr>
+							<tr>
+								<td><button type="button" id="grain" onclick="buyGrain()"><img draggable="false" src="grain.png">Buy Wheat For <span id="grain-price">500</span></button></td>
+								<td><h3 id="grain-own-tag">Wheat Plants Owned: <span id="grain-own">0</span></h3></td>
+							</tr>
+							<tr>
+								<td><button type="button" id="milk" onclick="buyMilk()"><img draggable="false" src="milk.png">Buy Cow For <span id="milk-price">1000</span></button></td>
+								<td><h3 id="milk-own-tag">Cows Owned: <span id="milk-own">0</span></h3></td>
+							</tr>
+							<tr>
+								<td><button type="button" id="rice" onclick="buyRice()"><img draggable="false" src="rice.png">Buy Rice For <span id="rice-price">10000</span></button></td>
+								<td><h3 id="rice-own-tag">Rice Owned: <span id="rice-own">0</span></h3></td>
+							</tr>
+							<tr>
+								<td><button type="button" id="tomato" onclick="buyTomato()"><img draggable="false" src="tomato.png">Buy Tomato For <span id="tomato-price">30000</span></button></td>
+								<td><h3 id="tomato-own-tag">Tomato Plants Owned: <span id="tomato-own">0</span></h3></td>
+							</tr>
+							<tr>
+								<td><button type="button" id="ras" onclick="buyRas()"><img draggable="false" src="ras.png">Buy Raspberry For <span id="ras-price">50000</span></button></td>
+								<td><h3 id="ras-own-tag">Raspberry Plants Owned: <span id="ras-own">0</span></h3></td>
+							</tr>
+							<tr>
+								<td><button type="button" id="peach" onclick="buyPeach()"><img draggable="false" src="peach.png">Buy Peach For <span id="Peach-price">100000</span></button></td>
+								<td><h3 id="peach-own-tag">Peach Plants Owned: <span id="Peach-own">0</span></h3></td>
+							</tr>
+						</table>
+                        <p id="news">You decided to make a farm.</p>
+						<button type="button" id="harvest" class="borderless" onclick="harvestClick()"><img src="harvest.png"></button>
+        </form>
+        <script src="main.js"></script>
+
+    </body>
+</html>

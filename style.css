@@ -1,0 +1,139 @@
+#main {
+    position: relative;
+    bottom: 469px;
+}
+
+#news {
+    position: relative;
+    margin-right: 1000px;
+    left: 960px;
+    bottom: 920px;
+}
+
+#harvest {
+    visibility: hidden;
+}
+
+body {
+    font-family: "Lucida Console", monospace;
+    background-image: url(bg.png)
+}
+#upgrade {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+}
+#milk {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#rice {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#tomato {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#ras {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#peach {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#chic {
+    font-size: 14px;
+    background-color: rgb(66, 63, 63);
+    border-radius: 10px;
+}
+#grain {
+    font-size: 14px;
+    background-color: rgb(66, 63, 63);
+    border-radius: 10px;
+}
+.borderless {
+    border: none;
+    background: none;
+}
+#click-me {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+}
+#total-money {
+    position: relative;
+    /*text-align: center;*/
+}
+table {
+	border-collapse: collapse;
+	position: relative;
+	left: 300px;
+	bottom: 460px;
+}
+tr,td {
+	padding: 0;
+}
+body {
+    font-family: "Lucida Console", monospace;
+    background-image: url(bg.png)
+}
+#upgrade {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+}
+#milk {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#rice {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#tomato {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#ras {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#peach {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+    font-size: 14px;
+}
+#chic {
+    font-size: 14px;
+    background-color: rgb(66, 63, 63);
+    border-radius: 10px;
+}
+#grain {
+    font-size: 14px;
+    background-color: rgb(66, 63, 63);
+    border-radius: 10px;
+}
+.borderless {
+    border: none;
+    background: none;
+}
+#click-me {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+}
+#total-money {
+    position: relative;
+    /*text-align: center;*/
+}
