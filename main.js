@@ -130,6 +130,7 @@ function press() {
         //    }
         //killClones()
 }
+/*
 function buyChic() {
     if (money >= chicPrice.innerHTML) {
         money -= chicPrice.innerHTML
@@ -223,6 +224,20 @@ function buyPeach() {
         peachOwn.innerHTML = peachOwn.innerHTML
         MpS.innerHTML = eval(MpS.innerHTML+"+100")
         peachPice.innerHTML = Math.ceil(Number(peachPice.innerHTML)*1.25)
+    } else {
+        console.log("something went wrong")
+    }
+}
+*/
+function buyItem(price, own, value) {
+    if (money >= price.innerHTML) {
+        money -= price.innerHTML
+        updateMoney()
+        buildingsOwn += 1
+        own.innerHTML = Number(eval(own.innerHTML+"+1"));
+        own.innerHTML = own.innerHTML
+        MpS.innerHTML = eval(MpS.innerHTML+"+"+String(value))
+        price.innerHTML = Math.ceil(Number(price.innerHTML)*1.25)
     } else {
         console.log("something went wrong")
     }
@@ -321,7 +336,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 324";//lol looked
+        newsBanner.innerHTML = "You wonder what's on line 339";//lol looked
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
