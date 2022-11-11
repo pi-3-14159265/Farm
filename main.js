@@ -229,7 +229,7 @@ function buyPeach() {
 }
 
 function upp() {
-    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "http://127.0.0.1:5500/grain-click.png") {
+    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/grain-click.png") {
         money -= Number(upgradeCost.innerHTML)
         itemType = "Corn"
         document.getElementById("item-type").innerHTML = "Corn"
@@ -238,7 +238,7 @@ function upp() {
     } else {
         console.log("SOMETHING WENT WRONG")
     }
-    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "http://127.0.0.1:5500/egg.png") {
+    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/egg.png") {
         money -= Number(upgradeCost.innerHTML)
         itemType = "Grain"
         document.getElementById("item-type").innerHTML = "Wheat"
