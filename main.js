@@ -79,31 +79,31 @@ function press() {
 
 
 
-    if (money >= 80) {
+    if (money >= 80 || Number(chicOwn.innerHTML) > 0) {
         document.getElementById("chic").style.visibility = "visible"
         document.getElementById("chic-own-tag").style.visibility = "visible"
     } 
-    if (money >= 300) {
+    if (money >= 300 || Number(grainOwn.innerHTML) > 0) {
         document.getElementById("grain").style.visibility = "visible"
         document.getElementById("grain-own-tag").style.visibility = "visible"
     } 
-    if (money >= 800) {
+    if (money >= 800 || Number(milkOwn.innerHTML) > 0) {
         document.getElementById("milk").style.visibility = "visible"
         document.getElementById("milk-own-tag").style.visibility = "visible"
     } 
-    if (money >= 5000) {
+    if (money >= 5000 || Number(riceOwn.innerHTML) > 0) {
         document.getElementById("rice").style.visibility = "visible"
         document.getElementById("rice-own-tag").style.visibility = "visible"
     } 
-    if (money >= 20000) {
+    if (money >= 20000 || Number(tomatoOwn.innerHTML) > 0) {
         document.getElementById("tomato").style.visibility = "visible"
         document.getElementById("tomato-own-tag").style.visibility = "visible"
     } 
-    if (money >= 40000) {
+    if (money >= 40000 || Number(rasOwn.innerHTML) > 0) {
         document.getElementById("ras").style.visibility = "visible"
         document.getElementById("ras-own-tag").style.visibility = "visible"
     } 
-    if (money >= 80000) {
+    if (money >= 80000 || Number(peachOwn.innerHTML) > 0) {
         document.getElementById("peach").style.visibility = "visible"
         document.getElementById("peach-own-tag").style.visibility = "visible"
     } 
@@ -229,7 +229,7 @@ function buyPeach() {
 }
 
 function upp() {
-    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/grain-click.png") {
+    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "http://127.0.0.1:5500/grain-click.png") {
         money -= Number(upgradeCost.innerHTML)
         itemType = "Corn"
         document.getElementById("item-type").innerHTML = "Corn"
@@ -238,7 +238,7 @@ function upp() {
     } else {
         console.log("SOMETHING WENT WRONG")
     }
-    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/egg.png") {
+    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "http://127.0.0.1:5500/egg.png") {
         money -= Number(upgradeCost.innerHTML)
         itemType = "Grain"
         document.getElementById("item-type").innerHTML = "Wheat"
@@ -257,7 +257,7 @@ function news() {
         progress += 10
     }
     if (itemType == "Corn") {
-        progress += 20
+        progress += 39
     }
     let story = Math.floor(Math.random()*progress)
     //console.log(story)
@@ -321,7 +321,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 287";
+        newsBanner.innerHTML = "You wonder what's on line 324";
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
@@ -462,7 +462,115 @@ function news() {
     }
     if (story == 60) {
         newsBanner.innerHTML = "People Consider Switching Farm-Goods To Money";
+    /*
+
+    this is a break
+
+    */
     }
+    if (story == 61) {
+        newsBanner.innerHTML = "Local weather man claims it will rain eggs";
+    }
+    if (story == 62) {
+        newsBanner.innerHTML = "You just learned that you where hatched";
+    }
+    if (story == 63) {
+        newsBanner.innerHTML = "You found a your cows with a type writer";
+    }
+    if (story == 64) {
+        newsBanner.innerHTML = "You start to wonder who made the corn song";
+    }
+    if (story == 65) {
+        newsBanner.innerHTML = "I hope you have a corntastic day";
+    }
+    if (story == 66) {
+        newsBanner.innerHTML = "You start to wonder if reality is real or if your in a stimulation";
+    }
+    if (story == 67) {
+        newsBanner.innerHTML = "you wonder if it's cannibalism for a corn to eat pop corn";
+    }
+    if (story == 68) {
+        newsBanner.innerHTML = "you wonder who was the first person to eat corn and what there reasoning behind it was";
+    } 
+    if (story == 69) {
+        newsBanner.innerHTML = "Does corn go on pizza? what about eggs?";
+    }
+    if (story == 70) {
+        newsBanner.innerHTML = "Local news out reach starts to question how the chickens are laying one egg each second";
+    }
+    if (story == 71) {
+        newsBanner.innerHTML = "Your lawn was egged you with 'with your mom' you question if it was aliens or local kids";
+    }
+    if (story == 72) {
+        newsBanner.innerHTML = "you buy butter for your corn";
+    }
+    if (story == 73) {
+        newsBanner.innerHTML = "You started to question how much popcorn comes from all this corn.";
+    }
+    if (story == 74) {
+        newsBanner.innerHTML = "You wonder if grain is real then you eat a bread";
+    }
+    if (story == 75) {
+        newsBanner.innerHTML = "news says Gluten free bread is on the rise.";
+    }
+    if (story == 76) {
+        newsBanner.innerHTML = "old mc Donald had a farm and on this far he had "+String(chicOwn.innerHTML)+" chickens";
+    }
+    if (story == 77) {
+        newsBanner.innerHTML = "the news states that eggs help you with your hunger other side calls this fake news";
+    }
+    if (story == 78) {
+        newsBanner.innerHTML = "You read a fortune cookie that tells you to start a farm.";
+    }
+    if (story == 79) {
+        newsBanner.innerHTML = "You read a unusual fortune cookie which claims that you will die in three you ate the rest of the note.";
+    }
+}
+
+function recoverData() {
+    money = localStorage.getItem("money")
+    itemType = localStorage.getItem("item")
+    MpS.innerHTML = localStorage.getItem("mps")
+    chicPrice.innerHTML = localStorage.getItem("chicPrice")
+    chicOwn.innerHTML = localStorage.getItem("chicCount")
+    grainOwn.innerHTML = localStorage.getItem("grainOwn")
+    grainPrice.innerHTML = localStorage.getItem("grainPrice")
+    milkOwn.innerHTML = localStorage.getItem("milkOwn")
+    milkPrice.innerHTML = localStorage.getItem("milkPrice")
+    riceOwn.innerHTML = localStorage.getItem("riceOwn")
+    ricePrice.innerHTML = localStorage.getItem("ricePrice")
+    tomatoOwn.innerHTML = localStorage.getItem("tomatoOwn")
+    tomatoPrice.innerHTML = localStorage.getItem("tomatoPrice")
+    rasOwn.innerHTML = localStorage.getItem("rasOwn")
+    rasPrice.innerHTML = localStorage.getItem("rasPrice")
+    peachOwn.innerHTML = localStorage.getItem("peachOwn")
+    peachPice.innerHTML = localStorage.getItem("peachPrice")
+    document.getElementById("click-me").src = localStorage.getItem("clickMePic")
+    upgradeCost.innerHTML = localStorage.getItem("upgradePrice")
+}
+
+function saveData() {
+    localStorage.clear()
+    localStorage.setItem("money",money)
+    localStorage.setItem("item",itemType)
+    localStorage.setItem("mps",MpS.innerHTML)
+    localStorage.setItem("chicCount",chicOwn.innerHTML)
+    localStorage.setItem("chicPrice",chicPrice.innerHTML)
+    localStorage.setItem("grainOwn",grainOwn.innerHTML)
+    localStorage.setItem("grainPrice",grainPrice.innerHTML)
+    localStorage.setItem("milkOwn",milkOwn.innerHTML)
+    localStorage.setItem("milkPrice",milkPrice.innerHTML)
+    localStorage.setItem("riceOwn",riceOwn.innerHTML)
+    localStorage.setItem("ricePrice",ricePrice.innerHTML)
+    localStorage.setItem("tomatoOwn",tomatoOwn.innerHTML)
+    localStorage.setItem("tomatoPrice",tomatoPrice.innerHTML)
+    localStorage.setItem("rasOwn",rasOwn.innerHTML)
+    localStorage.setItem("rasPrice",rasPrice.innerHTML)
+    localStorage.setItem("peachOwn",peachOwn.innerHTML)
+    localStorage.setItem("peachPrice",peachPice.innerHTML)
+    localStorage.setItem("clickMePic", document.getElementById("click-me").src)
+    localStorage.setItem("upgradePrice",upgradeCost.innerHTML)
+    console.log("SAVED!")
 }
 
 function MpS_count() {
@@ -492,5 +600,4 @@ function harvest() {
 setInterval(MpS_count,100)
 setInterval(news,4000)
 setInterval(harvest,(70+Math.floor(Math.random()*20))*1000)
-
-//this is beta i hope this is working!
+setInterval(saveData, 20000)
