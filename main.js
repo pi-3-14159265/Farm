@@ -492,3 +492,5 @@ function harvest() {
 setInterval(MpS_count,100)
 setInterval(news,4000)
 setInterval(harvest,(70+Math.floor(Math.random()*20))*1000)
+
+//this is beta i hope this is working!
