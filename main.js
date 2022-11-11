@@ -1,4 +1,7 @@
 //This is going to be like cookie clicker!
+//Do to a few problem it is not a good idea to put saving on a loop EVER!
+//The current system fixes the problem at hand 
+
 let itemType = document.getElementById("item-type").innerHTML;
 let money = document.getElementById("total-money").innerHTML;
 //Notice that money and itemType are link to there HTML side so we create new ones
@@ -600,4 +603,4 @@ function harvest() {
 setInterval(MpS_count,100)
 setInterval(news,4000)
 setInterval(harvest,(70+Math.floor(Math.random()*20))*1000)
-setInterval(saveData, 20000)
+//setInterval(saveData, 20000)
