@@ -324,7 +324,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 324";
+        newsBanner.innerHTML = "You wonder what's on line 327";//lol you checked
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
