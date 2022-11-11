@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="style.css">
-    <body onload="recoverData()">
+    <body>
         <h1 class="font">Your Money:</h1>
         <h2 id="total-money" class="font">0</h2>
         <form>
@@ -12,6 +12,10 @@
 						<table id="main">
 							<tr>
 								<th><h3 id="MpS-tag">Money Per Second: <span id="MpS">0</h3></th>
+							</tr>
+							<tr>
+								<td><button type="button" id="save" onclick="saveData()">Save</button></td>
+								<td><button type="button" id="load" onclick="recoverData()">Load</button></td>
 							</tr>
 							<tr>
 								<td><button type="button" id="chic" onclick="buyChic()"><img draggable="false" src="chic.png">Buy Chiken For <span id="chic-price">100</span></button></td>
