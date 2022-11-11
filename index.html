@@ -14,10 +14,6 @@
 								<th><h3 id="MpS-tag">Money Per Second: <span id="MpS">0</h3></th>
 							</tr>
 							<tr>
-								<td><button type="button" id="save" onclick="saveData()">Save</button></td>
-								<td><button type="button" id="load" onclick="recoverData()">Load</button></td>
-							</tr>
-							<tr>
 								<td><button type="button" id="chic" onclick="buyChic()"><img draggable="false" src="chic.png">Buy Chiken For <span id="chic-price">100</span></button></td>
 								<td><h3 id="chic-own-tag">Chikens Owned: <span id="chic-own">0</span></h3></td>
 							</tr>
@@ -46,7 +42,16 @@
 								<td><h3 id="peach-own-tag">Peach Plants Owned: <span id="Peach-own">0</span></h3></td>
 							</tr>
 						</table>
-                        <p id="news">You decided to make a farm.</p>
+						<table id="news-location">
+							<caption id="news-holder">
+								<h4 id="news">You decided to make a farm.</h4>
+							</caption>
+							<tr>
+								<td><button type="button" id="save" onclick="saveData()">Save Data</button></td>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><button type="button" id="load" onclick="recoverData()">Load Data</button></td>
+							</tr>
+						</table>
 						<button type="button" id="harvest" class="borderless" onclick="harvestClick()"><img src="harvest.png"></button>
         </form>
         <script src="main.js"></script>
