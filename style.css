@@ -1,11 +1,16 @@
 #main {
     position: relative;
     bottom: 469px;
+    border-collapse: collapse;
+	left: 300px;
 }
-
-#news {
-    position: relative;
+/*
+#news-holder {
     margin-right: 1000px;
+}
+*/
+#news-location {
+    position: relative;
     left: 960px;
     bottom: 920px;
 }
@@ -95,12 +100,14 @@ body {
     position: relative;
     /*text-align: center;*/
 }
+/*
 table {
 	border-collapse: collapse;
 	position: relative;
 	left: 300px;
 	bottom: 460px;
 }
+*/
 tr,td {
 	padding: 0;
 }
