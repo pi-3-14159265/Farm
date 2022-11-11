@@ -42,6 +42,14 @@ body {
     border-radius: 10px;
     background-color: rgb(66, 63, 63);
 }
+#save {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+}
+#load {
+    border-radius: 10px;
+    background-color: rgb(66, 63, 63);
+}
 #milk {
     border-radius: 10px;
     background-color: rgb(66, 63, 63);
@@ -148,5 +156,3 @@ body {
     position: relative;
     /*text-align: center;*/
 }
-
-/*Making sure its the correct file*/
