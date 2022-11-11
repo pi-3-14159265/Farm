@@ -3,3 +3,5 @@ This is the main code to the clciker game I dont really know what to call it. An
 
 How To Play
 Basicly click the egg until you got enough money to buy some things 
+
+Thanks to @ChekinNooget for giving me idea of not adding function one at a time but rather a single function (noob mistake on my part)
