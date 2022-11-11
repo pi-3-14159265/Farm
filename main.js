@@ -1,7 +1,4 @@
 //This is going to be like cookie clicker!
-//Do to a few problem it is not a good idea to put saving on a loop EVER!
-//The current system fixes the problem at hand 
-
 let itemType = document.getElementById("item-type").innerHTML;
 let money = document.getElementById("total-money").innerHTML;
 //Notice that money and itemType are link to there HTML side so we create new ones
@@ -232,7 +229,7 @@ function buyPeach() {
 }
 
 function upp() {
-    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/grain-click.png") {
+    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "http://127.0.0.1:5500/grain-click.png") {
         money -= Number(upgradeCost.innerHTML)
         itemType = "Corn"
         document.getElementById("item-type").innerHTML = "Corn"
@@ -241,7 +238,7 @@ function upp() {
     } else {
         console.log("SOMETHING WENT WRONG")
     }
-    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/egg.png") {
+    if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "http://127.0.0.1:5500/egg.png") {
         money -= Number(upgradeCost.innerHTML)
         itemType = "Grain"
         document.getElementById("item-type").innerHTML = "Wheat"
@@ -324,7 +321,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 327";//lol you checked
+        newsBanner.innerHTML = "You wonder what's on line 324";
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
@@ -550,7 +547,6 @@ function recoverData() {
     peachPice.innerHTML = localStorage.getItem("peachPrice")
     document.getElementById("click-me").src = localStorage.getItem("clickMePic")
     upgradeCost.innerHTML = localStorage.getItem("upgradePrice")
-    alert("Loaded!")
 }
 
 function saveData() {
@@ -574,7 +570,7 @@ function saveData() {
     localStorage.setItem("peachPrice",peachPice.innerHTML)
     localStorage.setItem("clickMePic", document.getElementById("click-me").src)
     localStorage.setItem("upgradePrice",upgradeCost.innerHTML)
-    alert("Data Saved")
+    console.log("SAVED!")
 }
 
 function MpS_count() {
