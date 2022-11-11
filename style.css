@@ -9,7 +9,24 @@
     left: 960px;
     bottom: 920px;
 }
-
+#grain-own-tag {
+    visibility: hidden;
+}
+#milk-own-tag {
+    visibility: hidden;
+}
+#rice-own-tag {
+    visibility: hidden;
+}
+#tomato-own-tag {
+    visibility: hidden;
+}
+#ras-own-tag {
+    visibility: hidden;
+}
+#peach-own-tag {
+    visibility: hidden;
+}
 #harvest {
     visibility: hidden;
 }
@@ -17,6 +34,9 @@
 body {
     font-family: "Lucida Console", monospace;
     background-image: url(bg.png)
+}
+#chic-own-tag {
+    visibility: hidden;
 }
 #upgrade {
     border-radius: 10px;
@@ -27,32 +47,28 @@ body {
     background-color: rgb(66, 63, 63);
     font-size: 14px;
 }
-#rice {
-    border-radius: 10px;
-    background-color: rgb(66, 63, 63);
-    font-size: 14px;
-}
+
 #tomato {
+    visibility: hidden;
     border-radius: 10px;
     background-color: rgb(66, 63, 63);
     font-size: 14px;
 }
-#ras {
-    border-radius: 10px;
-    background-color: rgb(66, 63, 63);
-    font-size: 14px;
-}
+
 #peach {
+    visibility: hidden;
     border-radius: 10px;
     background-color: rgb(66, 63, 63);
     font-size: 14px;
 }
 #chic {
+    visibility: hidden;
     font-size: 14px;
     background-color: rgb(66, 63, 63);
     border-radius: 10px;
 }
 #grain {
+    visibility: hidden;
     font-size: 14px;
     background-color: rgb(66, 63, 63);
     border-radius: 10px;
@@ -89,30 +105,25 @@ body {
     background-color: rgb(66, 63, 63);
 }
 #milk {
+    visibility: hidden;
     border-radius: 10px;
     background-color: rgb(66, 63, 63);
     font-size: 14px;
 }
 #rice {
+    visibility: hidden;
     border-radius: 10px;
     background-color: rgb(66, 63, 63);
     font-size: 14px;
 }
-#tomato {
-    border-radius: 10px;
-    background-color: rgb(66, 63, 63);
-    font-size: 14px;
-}
+
 #ras {
+    visibility: hidden;
     border-radius: 10px;
     background-color: rgb(66, 63, 63);
     font-size: 14px;
 }
-#peach {
-    border-radius: 10px;
-    background-color: rgb(66, 63, 63);
-    font-size: 14px;
-}
+
 #chic {
     font-size: 14px;
     background-color: rgb(66, 63, 63);
