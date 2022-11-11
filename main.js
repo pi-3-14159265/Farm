@@ -77,6 +77,37 @@ function press() {
         document.getElementById('total-money').innerHTML = money;
     }
 
+
+
+    if (money >= 80) {
+        document.getElementById("chic").style.visibility = "visible"
+        document.getElementById("chic-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 300) {
+        document.getElementById("grain").style.visibility = "visible"
+        document.getElementById("grain-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 800) {
+        document.getElementById("milk").style.visibility = "visible"
+        document.getElementById("milk-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 5000) {
+        document.getElementById("rice").style.visibility = "visible"
+        document.getElementById("rice-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 20000) {
+        document.getElementById("tomato").style.visibility = "visible"
+        document.getElementById("tomato-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 40000) {
+        document.getElementById("ras").style.visibility = "visible"
+        document.getElementById("ras-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 80000) {
+        document.getElementById("peach").style.visibility = "visible"
+        document.getElementById("peach-own-tag").style.visibility = "visible"
+    } 
+
         //killClones()
         //let randint = Math.floor(Math.random() * 21);
         //let randpar = "_"+String(randint)
