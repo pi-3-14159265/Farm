@@ -21,6 +21,8 @@ let rasPrice = document.getElementById("ras-price");
 let rasOwn = document.getElementById("ras-own");
 let peachPice = document.getElementById("Peach-price");
 let peachOwn = document.getElementById("Peach-own");
+let goldPrice = document.getElementById("gold-price");
+let goldOwn = document.getElementById("gold-own");
 let muti = "1";
 let buildingsOwn = 0;
 let timeBeforVanish = 7000;
@@ -32,7 +34,7 @@ let tomatoMuti = 0;
 let riceMuti = 0;
 let rasMuti = 0;
 let peachMuti = 0;
-let MpS_muti = 1
+let MpS_muti = 0;
 
 
 function updateMoney() {
@@ -106,6 +108,10 @@ function press() {
     if (money >= 80000 || Number(peachOwn.innerHTML) > 0) {
         document.getElementById("peach").style.visibility = "visible"
         document.getElementById("peach-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 800000 || Number(goldOwn.innerHTML) > 0) {
+        document.getElementById("gold").style.visibility = "visible"
+        document.getElementById("gold-own-tag").style.visibility = "visible"
     } 
 
         //killClones()
@@ -268,6 +274,7 @@ function news() {
     //console.log("banner")
     let newsBanner = document.getElementById("news");
     let progress = 41;
+    let theOtherChance = Math.floor(Math.random()*2)
     if (itemType == "Grain") {
         progress += 10
     }
@@ -281,31 +288,83 @@ function news() {
         //console.log("this worked")
     }
     if (story == 1) {
-        newsBanner.innerHTML = "ahh a day in the life";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "ahh a day in the life";
+        } else {
+            newsBanner.innerHTML = "Did you know there no real maximum length to these things you probably wont get to read this in 5 seconds but I don't really care I think its fun to leave you guys hanging I don't really know why its this long but it is now ill just fill this with random junk like did you know my favorite colour is green I know its a really nice colour also I have terrible grammar (if you couldn't tell)";
+        }
     }
     if (story == 2) {
-        newsBanner.innerHTML = "Clicking random items is hard work.";
+        if (theOtherChance == 1) {
+             newsBanner.innerHTML = "Clicking random items is hard work.";
+        } else {
+            newsBanner.innerHTML = "Business is good";
+        }
     }
     if (story == 3) {
-        newsBanner.innerHTML = "You decide to sell your eggs";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "You decide to sell your eggs";
+        } else {
+            newsBanner.innerHTML = "The President Eats An Egg on Camera Chickens Protest";
+        }
     }
     if (story == 4) {
-        newsBanner.innerHTML = "Why is an egg worth a dollar? You have no idea!";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "Why is an egg worth a dollar? You have no idea!";
+        } else {
+            newsBanner.innerHTML = "New Legislation States It Is Now Finally Illegal For Chickens To Eat Eggs.";
+        }
     }
     if (story == 5) {
-        newsBanner.innerHTML = "You wonder if there's any point in playing this game";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "You wonder if there's any point in playing this game";
+        } else {
+            newsBanner.innerHTML = "Scientist find ancient tablet containing the legend of the 'Golden Harvest'";
+        }
     }
     if (story == 6) {
+        if (theOtherChance == 1) {
         newsBanner.innerHTML = "Experts say 'Farming is easy all you do is smash a button'";
+        } else {
+            let theOtherChance = Math.floor(Math.random()*2)
+            if (theOtherChance == 1) {
+                newsBanner.innerHTML = "Experts say 'Farming is easy all you do is smash a button'";
+            } else {
+                let theOtherChance = Math.floor(Math.random()*2)
+                if (theOtherChance == 1) {
+                    newsBanner.innerHTML = "Experts say 'Farming is easy all you do is smash a button'";
+                } else {
+                    let theOtherChance = Math.floor(Math.random()*2)
+                    if (theOtherChance == 1) {
+                        newsBanner.innerHTML = "Experts say 'Farming is easy all you do is smash a button'";
+                    } else {
+                    newsBanner.innerHTML = "THIS IS THE HARDEST POP UP TEXT TO GET IN THE GAME";
+                    MpS_muti += 0.01;
+                    }
+                }
+            }
+        }
     }
     if (story == 7) {
-        newsBanner.innerHTML = "Local kids break into farm to click a button";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "Local kids break into farm to click a button";
+        } else {
+            newsBanner.innerHTML = "New Planet Discovered With The Shape Of An Egg";
+        }
     }
     if (story == 8) {
-        newsBanner.innerHTML = "You are starting to be the talk of the town";
+        if (theOtherChance == 1){
+            newsBanner.innerHTML = "You are starting to be the talk of the town";
+        } else {
+            newsBanner.innerHTML = "You have a dream involving the chicken that lays golden eggs";
+        }
     }
     if (story == 9) {
-        newsBanner.innerHTML = "You hire local kid to take people on tours of the farm!";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "You hire local kid to take people on tours of the farm!";//Tate
+        } else {
+            newsBanner.innerHTML = "Experts Say Money Can Grow On Trees";
+        }
     }
     if (story == 10) {
         newsBanner.innerHTML = "Man Found To Be Stock Piling Eggs Intentions Unknown";
@@ -336,7 +395,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 339";//lol looked
+        newsBanner.innerHTML = "You wonder what's on line 398";//lol looked
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
@@ -590,7 +649,7 @@ function saveData() {
 
 function MpS_count() {
     //money += ((MpS_muti*((Number(chicOwn.innerHTML)*(1+chicMuti))+(Number(grainOwn.innerHTML)*(5+grainMuti))+(Number(milkOwn.innerHTML)*(10+milkMuti))+(Number(riceOwn.innerHTML)*(15+riceMuti))+(Number(tomatoOwn.innerHTML)*(30+tomatoMuti))+(Number(rasOwn.innerHTML)*(50+rasMuti))+(Number(peachOwn.innerHTML)*(100+peachMuti))))/10)
-    money = (Math.round(((Number(MpS.innerHTML)/10)+Number(money))*100))/100
+    money = (Math.round((((Number(MpS.innerHTML)*(MpS_muti+1))/10)+Number(money))*100))/100
     updateMoney()
 }
 
@@ -611,6 +670,20 @@ function harvest() {
     }, 7000)
     //spawnTime = (70+Math.floor(Math.random()*20))*1000
     //console.log("Got to the end "+String(Math.floor(Math.random()*1000))+"px"+String(Math.floor(Math.random()*500))+"px")
+}
+function buyGold() {
+    if (money >= goldPrice.innerHTML) {
+        money -= goldPrice.innerHTML
+        updateMoney()
+        buildingsOwn += 1
+        goldOwn.innerHTML = Number(eval(goldOwn.innerHTML+"+1"));
+        goldOwn.innerHTML = goldOwn.innerHTML
+        //MpS.innerHTML = eval(MpS.innerHTML+"+"+String(value))
+        MpS_muti += .01
+        goldPrice.innerHTML = Math.ceil(Number(goldPrice.innerHTML)*1.25)
+    } else {
+        console.log("something went wrong")
+    }
 }
 setInterval(MpS_count,100)
 setInterval(news,4000)
