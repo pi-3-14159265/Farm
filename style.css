@@ -1,6 +1,6 @@
 #main {
     position: relative;
-    bottom: 469px;
+    bottom: 467px;
     border-collapse: collapse;
 	left: 300px;
 }
@@ -12,7 +12,7 @@
 #news-location {
     position: relative;
     left: 960px;
-    bottom: 920px;
+    bottom: 977px;
 }
 #grain-own-tag {
     visibility: hidden;
@@ -32,6 +32,9 @@
 #peach-own-tag {
     visibility: hidden;
 }
+#peach-own-tag {
+    visibility: hidden;
+}
 #harvest {
     visibility: hidden;
 }
@@ -40,6 +43,14 @@ body {
     font-family: "Lucida Console", monospace;
     background-image: url(bg.png);
     /*opacity: ;*/
+}
+#gold {
+    border-radius: 10px;
+    background-color: rgb(151, 142, 142);
+    visibility: hidden;
+}
+#gold-own-tag {
+    visibility: hidden;
 }
 #chic-own-tag {
     visibility: hidden;
