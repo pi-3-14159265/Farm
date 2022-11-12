@@ -5,6 +5,23 @@ let money = document.getElementById("total-money").innerHTML;
 let rawMoney = document.getElementById("total-money");
 let rawItemType = document.getElementById("item-type");
 let obj = document.getElementById("obj");
+/*
+
+This is the index for the variables I have create below  if it has the words own after it it means that 
+is the HTML value that is displaying the item at hand if it has price behind it it is displaying the price of the object
+at hand key below:
+
+chic: Chicken
+grain: Wheat
+milk: cows
+rice: rice 
+tomato: tomato
+ras: raspberry
+peach: peach
+gold: golden harvest
+MpS: Money Per Second
+
+*/
 let chicPrice = document.getElementById("chic-price");
 let chicOwn = document.getElementById("chic-own");
 let MpS = document.getElementById("MpS");
@@ -19,28 +36,29 @@ let tomatoPrice = document.getElementById("tomato-price");
 let tomatoOwn = document.getElementById("tomato-own");
 let rasPrice = document.getElementById("ras-price");
 let rasOwn = document.getElementById("ras-own");
-let peachPice = document.getElementById("Peach-price");
+let peachPrice = document.getElementById("Peach-price");
 let peachOwn = document.getElementById("Peach-own");
 let goldPrice = document.getElementById("gold-price");
 let goldOwn = document.getElementById("gold-own");
-let muti = "1";
-let buildingsOwn = 0;
-let timeBeforVanish = 7000;
-let spawnTime = 6700;
-let chicMuti = 0;
-let grainMuti = 0;
-let milkMuti = 0;
-let tomatoMuti = 0;
-let riceMuti = 0;
-let rasMuti = 0;
-let peachMuti = 0;
-let MpS_muti = 0;
+let muti = "1";//unused
+let buildingsOwn = 0;//kinda used might be broken
+let timeBeforVanish = 7000;//unused
+let spawnTime = 6700;//unused
+let chicMuti = 0;//unused
+let grainMuti = 0;//unused
+let milkMuti = 0;//unused
+let tomatoMuti = 0;//unused
+let riceMuti = 0;//unused
+let rasMuti = 0;//unused
+let peachMuti = 0;//unused
+let MpS_muti = 0;//use this in the form of a decimal to add to the total mps count
 
-
+//we use this to update our money its very useful
 function updateMoney() {
     document.getElementById('total-money').innerHTML = money;
 }
 /*
+//unused function because animation wasn't working
 function killClones() {
     document.getElementById('_1').innerHTML = '';
     document.getElementById('_2').innerHTML = '';
@@ -65,6 +83,7 @@ function killClones() {
 }
 */
 
+//this is for when the main item is pressed 
 function press() {
     if (itemType === 'Egg') {
         money = Number(eval(money+"+1"+"*"+muti));
@@ -80,7 +99,8 @@ function press() {
     }
 
 
-
+    //checking wheatear to display vars yhea I know I could make a function that dose this
+    //but I didn't so yhea...
     if (money >= 80 || Number(chicOwn.innerHTML) > 0) {
         document.getElementById("chic").style.visibility = "visible"
         document.getElementById("chic-own-tag").style.visibility = "visible"
@@ -113,7 +133,7 @@ function press() {
         document.getElementById("gold").style.visibility = "visible"
         document.getElementById("gold-own-tag").style.visibility = "visible"
     } 
-
+        ////this was for an animation that never happened 
         //killClones()
         //let randint = Math.floor(Math.random() * 21);
         //let randpar = "_"+String(randint)
@@ -136,6 +156,8 @@ function press() {
         //    }
         //killClones()
 }
+
+//below is code that works but has been replaced for something that works better so were keeping it around still
 /*
 function buyChic() {
     if (money >= chicPrice.innerHTML) {
@@ -222,19 +244,22 @@ function buyRas() {
 }
 
 function buyPeach() {
-    if (money >= peachPice.innerHTML) {
-        money -= peachPice.innerHTML
+    if (money >= peachPrice.innerHTML) {
+        money -= peachPrice.innerHTML
         updateMoney()
         buildingsOwn += 1
         peachOwn.innerHTML = Number(eval(peachOwn.innerHTML+"+1"));
         peachOwn.innerHTML = peachOwn.innerHTML
         MpS.innerHTML = eval(MpS.innerHTML+"+100")
-        peachPice.innerHTML = Math.ceil(Number(peachPice.innerHTML)*1.25)
+        peachPrice.innerHTML = Math.ceil(Number(peachPrice.innerHTML)*1.25)
     } else {
         console.log("something went wrong")
     }
 }
 */
+
+//Thanks to person on GitHub I use this instead of above although I know above works so if I ever need the code
+//its still there 
 function buyItem(price, own, value) {
     if (money >= price.innerHTML) {
         money -= price.innerHTML
@@ -249,6 +274,7 @@ function buyItem(price, own, value) {
     }
 }
 
+//this refers to upgrading the main item (the thing that you click)
 function upp() {
     if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/grain-click.png") {
         money -= Number(upgradeCost.innerHTML)
@@ -270,6 +296,11 @@ function upp() {
     }
 }
 
+
+//This is the pop up I don't really know what else to call them there's not really a good way to organize them but we 
+//still have to try part of the pop ups is the farther you are in the game the more text you get recently 
+//I've been basing pop-ups on the item you click but it might be a better idea to to a Boolean value for each type of 
+//thing
 function news() {
     //console.log("banner")
     let newsBanner = document.getElementById("news");
@@ -367,7 +398,11 @@ function news() {
         }
     }
     if (story == 10) {
-        newsBanner.innerHTML = "Man Found To Be Stock Piling Eggs Intentions Unknown";
+        if (theOtherChance == 1){
+            newsBanner.innerHTML = "Man Found To Be Stock Piling Eggs Intentions Unknown";
+        } else {
+            newsBanner.innerHTML = "Why do they have blue eyes?";
+        }
     }
     if (story == 11) {
         newsBanner.innerHTML = "A local dinner buys some of your eggs";
@@ -395,7 +430,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 398";//lol looked
+        newsBanner.innerHTML = "You wonder what's on line 433";//lol looked
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
@@ -601,6 +636,7 @@ function news() {
     }
 }
 
+//Basically we want all our useful variables on localStorage to we do the task of regathering them here
 function recoverData() {
     money = localStorage.getItem("money")
     itemType = localStorage.getItem("item")
@@ -618,11 +654,14 @@ function recoverData() {
     rasOwn.innerHTML = localStorage.getItem("rasOwn")
     rasPrice.innerHTML = localStorage.getItem("rasPrice")
     peachOwn.innerHTML = localStorage.getItem("peachOwn")
-    peachPice.innerHTML = localStorage.getItem("peachPrice")
+    peachPrice.innerHTML = localStorage.getItem("peachPrice")
     document.getElementById("click-me").src = localStorage.getItem("clickMePic")
-    upgradeCost.innerHTML = localStorage.getItem("upgradePrice")
+    goldPrice.innerHTML = localStorage.getItem("goldPrice")
+    goldOwn.innerHTML = localStorage.getItem("goldOwn")
+    MpS_muti = Number(localStorage.getItem("mps_muti"))
 }
 
+//This is the reveres of above we are putting them on the system here 
 function saveData() {
     localStorage.clear()
     localStorage.setItem("money",money)
@@ -641,18 +680,25 @@ function saveData() {
     localStorage.setItem("rasOwn",rasOwn.innerHTML)
     localStorage.setItem("rasPrice",rasPrice.innerHTML)
     localStorage.setItem("peachOwn",peachOwn.innerHTML)
-    localStorage.setItem("peachPrice",peachPice.innerHTML)
+    localStorage.setItem("peachPrice",peachPrice.innerHTML)
     localStorage.setItem("clickMePic", document.getElementById("click-me").src)
     localStorage.setItem("upgradePrice",upgradeCost.innerHTML)
+    localStorage.setItem("goldPrice",goldPrice.innerHTML)
+    localStorage.setItem("goldOwn",goldOwn.innerHTML)
+    localStorage.setItem("mps_muti", String(MpS_muti))
     console.log("SAVED!")
 }
 
+//MpS is money per second so in this handy little piece of code we gain it but the interval is below
+//not sure if I'm suppose to do it that way but I did vars-functions-intervals It stores the data above
+//I want to store the data via using the item number
 function MpS_count() {
     //money += ((MpS_muti*((Number(chicOwn.innerHTML)*(1+chicMuti))+(Number(grainOwn.innerHTML)*(5+grainMuti))+(Number(milkOwn.innerHTML)*(10+milkMuti))+(Number(riceOwn.innerHTML)*(15+riceMuti))+(Number(tomatoOwn.innerHTML)*(30+tomatoMuti))+(Number(rasOwn.innerHTML)*(50+rasMuti))+(Number(peachOwn.innerHTML)*(100+peachMuti))))/10)
     money = (Math.round((((Number(MpS.innerHTML)*(MpS_muti+1))/10)+Number(money))*100))/100
     updateMoney()
 }
 
+//this is for the pop up harvest the little button that might be broken that I don't care enough to fix rn
 function harvestClick() {
     document.getElementById("harvest").style.visibility = "hidden"
     money = money*1.20
@@ -660,6 +706,7 @@ function harvestClick() {
     //console.log("yes")
 }
 
+//this is when the harvest is about to be clicked were just setting up some random positions among another things
 function harvest() {
     document.getElementById("harvest").style.visibility = "visible";
     document.getElementById("harvest").style.position = "relative"
@@ -671,6 +718,8 @@ function harvest() {
     //spawnTime = (70+Math.floor(Math.random()*20))*1000
     //console.log("Got to the end "+String(Math.floor(Math.random()*1000))+"px"+String(Math.floor(Math.random()*500))+"px")
 }
+
+//this is a special function relating to MpS muti rather than the Mps so we see it here 
 function buyGold() {
     if (money >= goldPrice.innerHTML) {
         money -= goldPrice.innerHTML
@@ -685,6 +734,8 @@ function buyGold() {
         console.log("something went wrong")
     }
 }
+
+//the intervals as promised 
 setInterval(MpS_count,100)
 setInterval(news,4000)
 setInterval(harvest,(70+Math.floor(Math.random()*20))*1000)
