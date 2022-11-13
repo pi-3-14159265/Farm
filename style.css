@@ -1,8 +1,16 @@
+.main-cells {
+    padding-right: 50px;
+    text-align: right;
+}
+
+.upp:hover {
+    border: 1px;
+}
+
 #main {
     position: relative;
     bottom: 467px;
-    border-collapse: collapse;
-	left: 300px;
+	left: 700px;
 }
 /*
 #news-holder {
@@ -11,8 +19,8 @@
 */
 #news-location {
     position: relative;
-    left: 960px;
-    bottom: 977px;
+    left: 400px;
+    bottom: 1000px;
 }
 #grain-own-tag {
     visibility: hidden;
@@ -177,4 +185,3 @@ body {
     position: relative;
     /*text-align: center;*/
 }
-
