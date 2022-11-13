@@ -24,6 +24,8 @@ MpS: Money Per Second
 */
 let chicPrice = document.getElementById("chic-price");
 let chicOwn = document.getElementById("chic-own");
+let applPrice = document.getElementById("appl-price");
+let applOwn = document.getElementById("appl-own");
 let MpS = document.getElementById("MpS");
 let grainPrice = document.getElementById("grain-price");
 let grainOwn = document.getElementById("grain-own");
@@ -116,32 +118,36 @@ function press() {
         document.getElementById("chic").style.visibility = "visible"
         //document.getElementById("chic-own-tag").style.visibility = "visible"
     } 
-    if (money >= 300 || Number(grainOwn.innerHTML) > 0) {
+    if (money >= 800 || Number(grainOwn.innerHTML) > 0) {
         document.getElementById("grain").style.visibility = "visible"
         //document.getElementById("grain-own-tag").style.visibility = "visible"
     } 
-    if (money >= 800 || Number(milkOwn.innerHTML) > 0) {
+    if (money >= 8000 || Number(milkOwn.innerHTML) > 0) {
         document.getElementById("milk").style.visibility = "visible"
         //document.getElementById("milk-own-tag").style.visibility = "visible"
     } 
-    if (money >= 5000 || Number(riceOwn.innerHTML) > 0) {
+    if (money >= 30000 || Number(riceOwn.innerHTML) > 0) {
         document.getElementById("rice").style.visibility = "visible"
         //document.getElementById("rice-own-tag").style.visibility = "visible"
     } 
-    if (money >= 20000 || Number(tomatoOwn.innerHTML) > 0) {
+    if (money >= 80000 || Number(tomatoOwn.innerHTML) > 0) {
         document.getElementById("tomato").style.visibility = "visible"
         //document.getElementById("tomato-own-tag").style.visibility = "visible"
     } 
-    if (money >= 40000 || Number(rasOwn.innerHTML) > 0) {
+    if (money >= 400000 || Number(rasOwn.innerHTML) > 0) {
         document.getElementById("ras").style.visibility = "visible"
         //document.getElementById("ras-own-tag").style.visibility = "visible"
     } 
-    if (money >= 80000 || Number(peachOwn.innerHTML) > 0) {
+    if (money >= 800000 || Number(peachOwn.innerHTML) > 0) {
         document.getElementById("peach").style.visibility = "visible"
         //document.getElementById("peach-own-tag").style.visibility = "visible"
     } 
-    if (money >= 800000 || Number(goldOwn.innerHTML) > 0) {
+    if (money >= 80000000 || Number(goldOwn.innerHTML) > 0) {
         document.getElementById("gold").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 8000000 || Number(applOwn.innerHTML) > 0) {
+        document.getElementById("appl").style.visibility = "visible"
         //document.getElementById("gold-own-tag").style.visibility = "visible"
     } 
         ////this was for an animation that never happened 
@@ -279,7 +285,7 @@ function buyItem(price, own, value) {
         own.innerHTML = Number(eval(own.innerHTML+"+1"));
         own.innerHTML = own.innerHTML
         MpS.innerHTML = eval(MpS.innerHTML+"+"+String(value))
-        price.innerHTML = Math.ceil(Number(price.innerHTML)*1.25)
+        price.innerHTML = Math.ceil(Number(price.innerHTML)*1.13)
     } else {
         console.log("something went wrong")
     }
@@ -451,13 +457,17 @@ function news() {
         }
     }
     if (story == 16) {
-        newsBanner.innerHTML = "Sometimes you lay awake at night and wonder why dose a raspberry plant cost "+String(rasPrice.innerHTML);
+        if (theOtherChance) {
+            newsBanner.innerHTML = "Sometimes you lay awake at night and wonder why dose a raspberry plant cost "+String(rasPrice.innerHTML);
+        } else {
+            newsBanner.innerHTML = "Local Kids Get Power Converters At Tosche";
+        }
     }
     if (story == 17) {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 460";//lol looked
+        newsBanner.innerHTML = "You wonder what's on line 470";//lol looked
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
@@ -494,7 +504,7 @@ function news() {
         newsBanner.innerHTML = "Women makes cookies with your eggs";
     }
     if (story == 29) {
-        newsBanner.innerHTML = "Goose Eggs On The Rise Buy Them At Local Asian Store!";
+        newsBanner.innerHTML = "Duck Eggs On The Rise Buy Them At Local Asian Store!";
     }
     if (story == 30) {
         newsBanner.innerHTML = "Egg Jokes On The Rise";
