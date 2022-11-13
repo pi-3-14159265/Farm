@@ -9,8 +9,8 @@
 
 #main {
     position: relative;
-    bottom: 467px;
-	left: 700px;
+    bottom: 75vh;
+	left: 110vh;
 }
 /*
 #news-holder {
@@ -19,8 +19,8 @@
 */
 #news-location {
     position: relative;
-    left: 400px;
-    bottom: 1000px;
+    left: 25vw;
+    bottom: 171vh;
 }
 #grain-own-tag {
     visibility: hidden;
@@ -43,6 +43,9 @@
 #peach-own-tag {
     visibility: hidden;
 }
+#appl-own-tag {
+    visibility: hidden;
+}
 #harvest {
     visibility: hidden;
 }
@@ -53,6 +56,11 @@ body {
     /*opacity: ;*/
 }
 #gold {
+    border-radius: 10px;
+    background-color: rgb(151, 142, 142);
+    visibility: hidden;
+}
+#appl {
     border-radius: 10px;
     background-color: rgb(151, 142, 142);
     visibility: hidden;
