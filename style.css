@@ -9,8 +9,8 @@
 
 #main {
     position: relative;
-    bottom: 75vh;
-	left: 110vh;
+    bottom: 471px;
+	left: 690px;
 }
 /*
 #news-holder {
@@ -19,8 +19,8 @@
 */
 #news-location {
     position: relative;
-    left: 25vw;
-    bottom: 171vh;
+    left: 360px;
+    bottom: 1060px;
 }
 #grain-own-tag {
     visibility: hidden;
