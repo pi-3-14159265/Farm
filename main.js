@@ -83,6 +83,17 @@ function killClones() {
 }
 */
 
+function onHover(tag) {
+    document.getElementById(tag).style.visibility = "visible"
+    //document.getElementById(tag.replace("-own-tag")).backgroundColor = rgb(160, 142, 142);
+    //document.getElementById(tag).style.bac = "visible"
+}
+
+function nonHover(tag) {
+    document.getElementById(tag).style.visibility = "hidden"
+    //document.getElementById(tag.replace("-own-tag")).backgroundColor = rgb(151, 142, 142);
+}
+
 //this is for when the main item is pressed 
 function press() {
     if (itemType === 'Egg') {
@@ -103,35 +114,35 @@ function press() {
     //but I didn't so yhea...
     if (money >= 80 || Number(chicOwn.innerHTML) > 0) {
         document.getElementById("chic").style.visibility = "visible"
-        document.getElementById("chic-own-tag").style.visibility = "visible"
+        //document.getElementById("chic-own-tag").style.visibility = "visible"
     } 
     if (money >= 300 || Number(grainOwn.innerHTML) > 0) {
         document.getElementById("grain").style.visibility = "visible"
-        document.getElementById("grain-own-tag").style.visibility = "visible"
+        //document.getElementById("grain-own-tag").style.visibility = "visible"
     } 
     if (money >= 800 || Number(milkOwn.innerHTML) > 0) {
         document.getElementById("milk").style.visibility = "visible"
-        document.getElementById("milk-own-tag").style.visibility = "visible"
+        //document.getElementById("milk-own-tag").style.visibility = "visible"
     } 
     if (money >= 5000 || Number(riceOwn.innerHTML) > 0) {
         document.getElementById("rice").style.visibility = "visible"
-        document.getElementById("rice-own-tag").style.visibility = "visible"
+        //document.getElementById("rice-own-tag").style.visibility = "visible"
     } 
     if (money >= 20000 || Number(tomatoOwn.innerHTML) > 0) {
         document.getElementById("tomato").style.visibility = "visible"
-        document.getElementById("tomato-own-tag").style.visibility = "visible"
+        //document.getElementById("tomato-own-tag").style.visibility = "visible"
     } 
     if (money >= 40000 || Number(rasOwn.innerHTML) > 0) {
         document.getElementById("ras").style.visibility = "visible"
-        document.getElementById("ras-own-tag").style.visibility = "visible"
+        //document.getElementById("ras-own-tag").style.visibility = "visible"
     } 
     if (money >= 80000 || Number(peachOwn.innerHTML) > 0) {
         document.getElementById("peach").style.visibility = "visible"
-        document.getElementById("peach-own-tag").style.visibility = "visible"
+        //document.getElementById("peach-own-tag").style.visibility = "visible"
     } 
     if (money >= 800000 || Number(goldOwn.innerHTML) > 0) {
         document.getElementById("gold").style.visibility = "visible"
-        document.getElementById("gold-own-tag").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
     } 
         ////this was for an animation that never happened 
         //killClones()
@@ -405,16 +416,32 @@ function news() {
         }
     }
     if (story == 11) {
-        newsBanner.innerHTML = "A local dinner buys some of your eggs";
+        if (theOtherChance == 1){
+            newsBanner.innerHTML = "A local dinner buys some of your eggs";
+        } else {
+            newsBanner.innerHTML = "Local Animals take over farm";
+        }
     }
     if (story == 12) {
-        newsBanner.innerHTML = "journalist removed from press because bad grammar";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "journalist removed from press because bad grammar";
+        } else {
+            newsBanner.innerHTML = "you here sheep bah 'four legs good two legs bad' as you walk by";
+        }
     }
     if (story == 13) {
-        newsBanner.innerHTML = "You install Node.js to your compute only to discover Python is better.";
+        if (theOtherChance == 1) {
+            newsBanner.innerHTML = "You install Node.js to your compute only to discover Python is better.";
+        } else {
+            newsBanner.innerHTML = "Animals On Strike!";
+        }
     }
     if (story == 14) {
-        newsBanner.innerHTML = "Local asylum prison escapes.";
+        if (theOtherChance == 1){
+            newsBanner.innerHTML = "Local asylum prison escapes.";
+        } else {
+            newsBanner.innerHTML = "Animal Band Touring In Vegas";//Horse joke thanks COs
+        }
     }
     if (story == 15) {
         if (Number(chicOwn) >= 1) {
@@ -430,7 +457,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 433";//lol looked
+        newsBanner.innerHTML = "You wonder what's on line 460";//lol looked
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
