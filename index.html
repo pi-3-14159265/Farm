@@ -17,39 +17,45 @@
                         <br></br>
 						<table id="main">
 							<tr>
-								<th><h3 id="MpS-tag">Money Per Second: <span id="MpS">0</h3></th>
+								<th></th>
+								<th class="main-cells"><h3 id="MpS-tag">Money Per Second: <span id="MpS">0</h3></th>
 							</tr>
 							<tr>
-								<td><button type="button" id="chic" onclick="buyItem(chicPrice,chicOwn,1)"><img draggable="false" src="chic.png">Buy Chiken For <span id="chic-price">100</span></button></td>
-								<td><h3 id="chic-own-tag">Chikens Owned: <span id="chic-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="chic-own-tag">Chikens Owned: <span id="chic-own">0</span></h3></td>
+							<td class="main-cells"><button type="button" class="upp" id="chic" onclick="buyItem(chicPrice,chicOwn,1)" onmouseover="onHover('chic-own-tag')" onmouseleave="nonHover('chic-own-tag')"><img draggable="false" src="chic.png">Buy Chiken For <span id="chic-price">100</span></button></td>
 							</tr>
 							<tr>
-								<td><button type="button" id="grain" onclick="buyItem(grainPrice,grainOwn,5)"><img draggable="false" src="grain.png">Buy Wheat For <span id="grain-price">500</span></button></td>
-								<td><h3 id="grain-own-tag">Wheat Plants Owned: <span id="grain-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="grain-own-tag">Wheat Plants Owned: <span id="grain-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="grain" onclick="buyItem(grainPrice,grainOwn,5)" onmouseover="onHover('grain-own-tag')" onmouseleave="nonHover('grain-own-tag')"><img draggable="false" src="grain.png">Buy Wheat For <span id="grain-price">500</span></button></td>
+								
 							</tr>
 							<tr>
-								<td><button type="button" id="milk" onclick="buyItem(milkPrice,milkOwn,10)"><img draggable="false" src="milk.png">Buy Cow For <span id="milk-price">1000</span></button></td>
-								<td><h3 id="milk-own-tag">Cows Owned: <span id="milk-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="milk-own-tag">Cows Owned: <span id="milk-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="milk" onclick="buyItem(milkPrice,milkOwn,10)" onmouseover="onHover('milk-own-tag')" onmouseleave="nonHover('milk-own-tag')"><img draggable="false" src="milk.png">Buy Cow For <span id="milk-price">1000</span></button></td>
 							</tr>
 							<tr>
-								<td><button type="button" id="rice" onclick="buyItem(ricePrice,riceOwn,15)"><img draggable="false" src="rice.png">Buy Rice For <span id="rice-price">10000</span></button></td>
-								<td><h3 id="rice-own-tag">Rice Owned: <span id="rice-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="rice-own-tag">Rice Owned: <span id="rice-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="rice" onclick="buyItem(ricePrice,riceOwn,15)" onmouseover="onHover('rice-own-tag')" onmouseleave="nonHover('rice-own-tag')"><img draggable="false" src="rice.png">Buy Rice For <span id="rice-price">10000</span></button></td>
+								
 							</tr>
 							<tr>
-								<td><button type="button" id="tomato" onclick="buyItem(tomatoPrice,tomatoOwn,30)"><img draggable="false" src="tomato.png">Buy Tomato For <span id="tomato-price">30000</span></button></td>
-								<td><h3 id="tomato-own-tag">Tomato Plants Owned: <span id="tomato-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="tomato-own-tag">Tomato Plants Owned: <span id="tomato-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="tomato" onclick="buyItem(tomatoPrice,tomatoOwn,30)" onmouseover="onHover('tomato-own-tag')" onmouseleave="nonHover('tomato-own-tag')"><img draggable="false" src="tomato.png">Buy Tomato For <span id="tomato-price">30000</span></button></td>
+								
 							</tr>
 							<tr>
-								<td><button type="button" id="ras" onclick="buyItem(rasPrice,rasOwn,50)"><img draggable="false" src="ras.png">Buy Raspberry For <span id="ras-price">50000</span></button></td>
-								<td><h3 id="ras-own-tag">Raspberry Plants Owned: <span id="ras-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="ras-own-tag">Raspberry Plants Owned: <span id="ras-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="ras" onclick="buyItem(rasPrice,rasOwn,50)" onmouseover="onHover('ras-own-tag')" onmouseleave="nonHover('ras-own-tag')"><img draggable="false" src="ras.png">Buy Raspberry For <span id="ras-price">50000</span></button></td>
+								
 							</tr>
 							<tr>
-								<td><button type="button" id="peach" onclick="buyItem(peachPrice,peachOwn,100)"><img draggable="false" src="peach.png">Buy Peach For <span id="Peach-price">100000</span></button></td>
-								<td><h3 id="peach-own-tag">Peach Plants Owned: <span id="Peach-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="peach-own-tag">Peach Plants Owned: <span id="Peach-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="peach" onclick="buyItem(peachPrice,peachOwn,100)" onmouseover="onHover('peach-own-tag')" onmouseleave="nonHover('peach-own-tag')"><img draggable="false" src="peach.png">Buy Peach For <span id="Peach-price">100000</span></button></td>
 							</tr>
 							<tr>
-								<td><button type="button" id="gold" onclick="buyGold()"><img draggable="false" src="gold_harvest.png">Buy Golden Harvest <span id="gold-price">1000000</span></button></td>
-								<td><h3 id="gold-own-tag">Harvest Level Owned: <span id="gold-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="gold-own-tag">Harvest Level Owned: <span id="gold-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="gold" onclick="buyGold()" onmouseover="onHover('gold-own-tag')" onmouseleave="nonHover('gold-own-tag')"><img draggable="false" src="gold_harvest.png">Buy Golden Harvest <span id="gold-price">1000000</span></button></td>
+								
 							</tr>
 						</table>
 						<table id="news-location">
