@@ -870,5 +870,5 @@ function buyGold() {
 setInterval(MpS_count,100)
 setInterval(news,4000)
 setInterval(harvest,(70+Math.floor(Math.random()*20))*1000)
-setInterval(UppAdd,1000)
+setInterval(UppAdd,100)
 //setInterval(saveData, 20000)
