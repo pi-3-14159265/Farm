@@ -821,57 +821,57 @@ function UppAdd() {
     } else {
         forEnd += Number(chicOwn.innerHTML)*1
     }
-    if (Number(grainUppOwn != 0)) {
+    if (Number(grainUppOwn.innerHTML) != 0) {
         forEnd += (Number(grainOwn.innerHTML)*10)*(percent*Number(grainUppOwn.innerHTML))
     } else {
         forEnd += Number(grainOwn.innerHTML)*10
     }
-    if (Number(milkUppOwn != 0)) {
+    if (Number(milkUppOwn.innerHTML) != 0) {
         forEnd += (Number(milkOwn.innerHTML)*50)*(percent*Number(milkUppOwn.innerHTML))
     } else {
         forEnd += Number(milkOwn.innerHTML)*50
     }
-    if (Number(riceUppOwn != 0)) {
+    if (Number(riceUppOwn.innerHTML) != 0) {
         forEnd += (Number(riceOwn.innerHTML)*100)*(percent*Number(riceUppOwn.innerHTML))
     } else {
         forEnd += Number(riceOwn.innerHTML)*100
     }
-    if (Number(tomatoUppOwn != 0)) {
+    if (Number(tomatoUppOwn.innerHTML) != 0) {
         forEnd += (Number(tomatoOwn.innerHTML)*500)*(percent*Number(tomatoUppOwn.innerHTML))
     } else {
         forEnd += Number(tomatoOwn.innerHTML)*500
     }
-    if (Number(rasUppOwn != 0)) {
+    if (Number(rasUppOwn.innerHTML) != 0) {
         forEnd += (Number(rasOwn.innerHTML)*1000)*(percent*Number(rasUppOwn.innerHTML))
     } else {
         forEnd += Number(rasOwn.innerHTML)*1000
     }
-    if (Number(peachUppOwn != 0)) {
+    if (Number(peachUppOwn.innerHTML) != 0) {
         forEnd += (Number(peachOwn.innerHTML)*5000)*(percent*Number(peachUppOwn.innerHTML))
     } else {
         forEnd += Number(peachOwn.innerHTML)*5000
     }
-    if (Number(applUppOwn != 0)) {
+    if (Number(applUppOwn.innerHTML) != 0) {
         forEnd += (Number(applOwn.innerHTML)*10000)*(percent*Number(applUppOwn.innerHTML))
     } else {
         forEnd += Number(applOwn.innerHTML)*10000
     }
-    if (Number(cocoUppOwn != 0)) {
+    if (Number(cocoUppOwn.innerHTML) != 0) {
         forEnd += (Number(cocoOwn.innerHTML)*50000)*(percent*Number(cocoUppOwn.innerHTML))
     } else {
         forEnd += Number(cocoOwn.innerHTML)*50000
     }
-    if (Number(grainUppOwn != 0)) {
+    if (Number(bioUppOwn.innerHTML) != 0) {
         forEnd += (Number(bioOwn.innerHTML)*100000)*(percent*Number(bioUppOwn.innerHTML))
     } else {
         forEnd += Number(bioOwn.innerHTML)*100000
     }
-    if (Number(starUppOwn != 0)) {
+    if (Number(starUppOwn.innerHTML) != 0) {
         forEnd += (Number(starOwn.innerHTML)*500000)*(percent*Number(starUppOwn.innerHTML))
     } else {
         forEnd += Number(starOwn.innerHTML)*500000
     }
-    if (Number(grainUppOwn != 0)) {
+    if (Number(rainUppOwn.innerHTML) != 0) {
         forEnd += (Number(rainOwn.innerHTML)*1000000)*(percent*Number(rainUppOwn.innerHTML))
     } else {
         forEnd += Number(rainOwn.innerHTML)*1000000
