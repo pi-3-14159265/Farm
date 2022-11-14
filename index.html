@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Heads Up i know i over use tables but live with it therey yery helpful!-->
 <html lang="en">
 	<head>
 		<link rel="icon" type="image/x-icon" href="chic.png">
@@ -21,8 +22,12 @@
 								<th class="main-cells"><h3 id="MpS-tag">Money Per Second: <span id="MpS">0</h3></th>
 							</tr>
 							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
 								<td class="main-cells"><h3 id="chic-own-tag">Chikens Owned: <span id="chic-own">0</span></h3></td>
-							<td class="main-cells"><button type="button" class="upp" id="chic" onclick="buyItem(chicPrice,chicOwn,1)" onmouseover="onHover('chic-own-tag')" onmouseleave="nonHover('chic-own-tag')"><img draggable="false" src="chic.png">Buy Chiken For <span id="chic-price">100</span></button></td>
+								<td class="main-cells"><button type="button" class="upp" id="chic" onclick="buyItem(chicPrice,chicOwn,1)" onmouseover="onHover('chic-own-tag')" onmouseleave="nonHover('chic-own-tag')"><img draggable="false" src="chic.png">Buy Chiken For <span id="chic-price">100</span></button></td>
 							</tr>
 							<tr>
 								<td class="main-cells"><h3 id="grain-own-tag">Wheat Plants Owned: <span id="grain-own">0</span></h3></td>
@@ -53,13 +58,84 @@
 								<td class="main-cells"><button type="button" class="upp" id="peach" onclick="buyItem(peachPrice,peachOwn,5000)" onmouseover="onHover('peach-own-tag')" onmouseleave="nonHover('peach-own-tag')"><img draggable="false" src="peach.png">Buy Peach For <span id="Peach-price">1000000</span></button></td>
 							</tr>
 							<tr>
-								<td class="main-cells"><h3 id="appl-own-tag">Peach Plants Owned: <span id="appl-own">0</span></h3></td>
+								<td class="main-cells"><h3 id="appl-own-tag">Apple Trees Owned: <span id="appl-own">0</span></h3></td>
 								<td class="main-cells"><button type="button" class="upp" id="appl" onclick="buyItem(applPrice,applOwn,10000)" onmouseover="onHover('appl-own-tag')" onmouseleave="nonHover('appl-own-tag')"><img draggable="false" src="appl.png">Buy Apple For <span id="appl-price">10000000</span></button></td>
 							</tr>
 							<tr>
+								<td class="main-cells"><h3 id="coco-own-tag">Coconut Trees Owned: <span id="coco-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="coco" onclick="buyItem(cocoPrice,cocoOwn,50000)" onmouseover="onHover('coco-own-tag')" onmouseleave="nonHover('coco-own-tag')"><img draggable="false" src="coca.png">Buy Coconut For <span id="coco-price">50000000</span></button></td>
+							</tr>
+							<tr>
+								<td class="main-cells"><h3 id="bio-own-tag">Bio Plants Owned: <span id="bio-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="bio" onclick="buyItem(bioPrice,bioOwn,100000)" onmouseover="onHover('bio-own-tag')" onmouseleave="nonHover('bio-own-tag')"><img draggable="false" src="potion.png">Buy Bio For <span id="bio-price">100000000</span></button></td>
+							</tr>
+							<tr>
+								<td class="main-cells"><h3 id="star-own-tag">Star Plants Owned: <span id="star-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="star" onclick="buyItem(starPrice,starOwn,500000)" onmouseover="onHover('star-own-tag')" onmouseleave="nonHover('star-own-tag')"><img draggable="false" src="star.png">Buy Star For <span id="star-price">500000000</span></button></td>
+							</tr>
+							<tr>
+								<td class="main-cells"><h3 id="rain-own-tag">Rainbow Plants Owned: <span id="rain-own">0</span></h3></td>
+								<td class="main-cells"><button type="button" class="upp" id="rain" onclick="buyItem(rainPrice,rainOwn,1000000)" onmouseover="onHover('rain-own-tag')" onmouseleave="nonHover('rain-own-tag')"><img draggable="false" src="rain.png">Buy Rainbow For <span id="rain-price">1000000000</span></button></td>
+							</tr>
+							<!--<tr>
 								<td class="main-cells"><h3 id="gold-own-tag">Harvest Level Owned: <span id="gold-own">0</span></h3></td>
 								<td class="main-cells"><button type="button" class="upp" id="gold" onclick="buyGold()" onmouseover="onHover('gold-own-tag')" onmouseleave="nonHover('gold-own-tag')"><img draggable="false" src="gold_harvest.png">Buy Golden Harvest <span id="gold-price">100000000</span></button></td>
 								
+							</tr>-->
+						</table>
+						<table id="upp-loc">
+							<caption class="sec-cells"><h3>Upgrades:</h3></caption>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="chic-upp"><button type="button" class="reg-bg" onmouseover="onHover('chic-upp-own')" onmouseleave="nonHover('chic-upp-own')" onclick="buyUpp(chicUppPrice,chicUppOwn)"><img src="chic.png">Upgrade for <span id="chic_upp">300</span></button></td>
+								<td class="sec-cells hide" id="chic-upp-tag"><h3 id="chic-upp-own">Times Upgraded: <span id="chic-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="grain-upp"><button type="button" class="reg-bg" onmouseover="onHover('grain-upp-own')" onmouseleave="nonHover('grain-upp-own')" onclick="buyUpp(grainUppPrice,grainUppOwn)"><img src="grain.png">Upgrade for <span id="grain_upp">3000</span></button></td>
+								<td class="sec-cells hide" id="grain-upp-tag"><h3 id="grain-upp-own">Times Upgraded: <span id="grain-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="milk-upp"><button type="button" class="reg-bg" onmouseover="onHover('milk-upp-own')" onmouseleave="nonHover('milk-upp-own')" onclick="buyUpp(milkUppPrice,milkUppOwn)"><img src="milk.png">Upgrade for <span id="milk_upp">15000</span></button></td>
+								<td class="sec-cells hide" id="milk-upp-tag"><h3 id="milk-upp-own">Times Upgraded: <span id="milk-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="rice-upp"><button type="button" class="reg-bg" onmouseover="onHover('rice-upp-own')" onmouseleave="nonHover('rice-upp-own')" onclick="buyUpp(riceUppPrice,riceUppOwn)"><img src="rice.png">Upgrade for <span id="rice_upp">70000</span></button></td>
+								<td class="sec-cells hide" id="rice-upp-tag"><h3 id="rice-upp-own">Times Upgraded: <span id="rice-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="tomato-upp"><button type="button" class="reg-bg" onmouseover="onHover('tomato-upp-own')" onmouseleave="nonHover('tomato-upp-own')" onclick="buyUpp(tomatoUppPrice,tomatoUppOwn)"><img src="tomato.png">Upgrade for <span id="tomato_upp">300000</span></button></td>
+								<td class="sec-cells hide" id="tomato-upp-tag"><h3 id="tomato-upp-own">Times Upgraded: <span id="tomato-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="ras-upp"><button type="button" class="reg-bg" onmouseover="onHover('ras-upp-own')" onmouseleave="nonHover('ras-upp-own')" onclick="buyUpp(rasUppPrice,rasUppOwn)"><img src="ras.png">Upgrade for <span id="ras_upp">800000</span></button></td>
+								<td class="sec-cells hide" id="ras-upp-tag"><h3 id="ras-upp-own">Times Upgraded: <span id="ras-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="peach-upp"><button type="button" class="reg-bg" onmouseover="onHover('peach-upp-own')" onmouseleave="nonHover('peach-upp-own')" onclick="buyUpp(peachUppPrice,peachUppOwn)"><img src="peach.png">Upgrade for <span id="peach_upp">3000000</span></button></td>
+								<td class="sec-cells hide" id="peach-upp-tag"><h3 id="peach-upp-own">Times Upgraded: <span id="peach-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="appl-upp"><button type="button" class="reg-bg" onmouseover="onHover('appl-upp-own')" onmouseleave="nonHover('appl-upp-own')" onclick="buyUpp(applUppPrice,applUppOwn)"><img src="appl.png">Upgrade for <span id="appl_upp">3000000</span></button></td>
+								<td class="sec-cells hide" id="appl-upp-tag"><h3 id="appl-upp-own">Times Upgraded: <span id="appl-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="coco-upp"><button type="button" class="reg-bg" onmouseover="onHover('coco-upp-own')" onmouseleave="nonHover('coco-upp-own')" onclick="buyUpp(cocoUppPrice,cocoUppOwn)"><img src="coca.png">Upgrade for <span id="coco_upp">8000000</span></button></td>
+								<td class="sec-cells hide" id="coco-upp-tag"><h3 id="coco-upp-own">Times Upgraded: <span id="coco-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="bio-upp"><button type="button" class="reg-bg" onmouseover="onHover('bio-upp-own')" onmouseleave="nonHover('bio-upp-own')" onclick="buyUpp(bioUppPrice,bioUppOwn)"><img src="potion.png">Upgrade for <span id="bio_upp">150000000</span></button></td>
+								<td class="sec-cells hide" id="bio-upp-tag"><h3 id="bio-upp-own">Times Upgraded: <span id="bio-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="star-upp"><button type="button" class="reg-bg" onmouseover="onHover('star-upp-own')" onmouseleave="nonHover('star-upp-own')" onclick="buyUpp(starUppPrice,starUppOwn)"><img src="star.png">Upgrade for <span id="star_upp">800000000</span></button></td>
+								<td class="sec-cells hide" id="star-upp-tag"><h3 id="star-upp-own">Times Upgraded: <span id="star-upp-own-var">0</span></h3></td>
+							</tr>
+							<tr>
+								<td class="sec-cells hide" id="rain-upp"><button type="button" class="reg-bg" onmouseover="onHover('rain-upp-own')" onmouseleave="nonHover('rain-upp-own')" onclick="buyUpp(rainUppPrice,rainUppOwn)"><img src="rain.png">Upgrade for <span id="rain_upp">1500000000</span></button></td>
+								<td class="sec-cells hide" id="rain-upp-tag"><h3 id="rain-upp-own">Times Upgraded: <span id="rain-upp-own-var">0</span></h3></td>
 							</tr>
 						</table>
 						<table id="news-location">
