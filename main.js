@@ -359,7 +359,7 @@ function buyUpp(price,own) {
         updateMoney()
         own.innerHTML = Number(eval(own.innerHTML+"+1"));
         own.innerHTML = own.innerHTML
-        price.innerHTML = Math.ceil(Number(price.innerHTML)*2.56)//one of my fav numbers XD
+        price.innerHTML = Math.ceil(Number(price.innerHTML)*1.56)//one of my fav numbers XD
     } else {
         console.log("Something Bad Happened")
     }
@@ -812,18 +812,21 @@ function MpS_count() {
 
 function UppAdd() {
     //money += (Number(chicOwn)*base_price)*1.1//10%
-    money += (Number(chicOwn.innerHTML)*1)*1.17
-    money += (Number(grainOwn.innerHTML)*10)*1.17
-    money += (Number(milkOwn.innerHTML)*50)*1.17
-    money += (Number(riceOwn.innerHTML)*100)*1.17
-    money += (Number(tomatoOwn.innerHTML)*500)*1.17
-    money += (Number(rasOwn.innerHTML)*1000)*1.17
-    money += (Number(peachOwn.innerHTML)*5000)*1.17
-    money += (Number(applOwn.innerHTML)*10000)*1.17
-    money += (Number(cocoOwn.innerHTML)*50000)*1.17
-    money += (Number(bioOwn.innerHTML)*100000)*1.17
-    money += (Number(starOwn.innerHTML)*500000)*1.17
-    money += (Number(rainOwn.innerHTML)*1000000)*1.17
+    const percent = 1.70
+    let forEnd = 0
+    forEnd += (Number(chicOwn.innerHTML)*1)*percent
+    forEnd += (Number(grainOwn.innerHTML)*10)*percent
+    forEnd += (Number(milkOwn.innerHTML)*50)*percent
+    forEnd += (Number(riceOwn.innerHTML)*100)*percent
+    forEnd += (Number(tomatoOwn.innerHTML)*500)*percent
+    forEnd += (Number(rasOwn.innerHTML)*1000)*percent
+    forEnd += (Number(peachOwn.innerHTML)*5000)*percent
+    forEnd += (Number(applOwn.innerHTML)*10000)*percent
+    forEnd += (Number(cocoOwn.innerHTML)*50000)*percent
+    forEnd += (Number(bioOwn.innerHTML)*100000)*percent
+    forEnd += (Number(starOwn.innerHTML)*500000)*percent
+    forEnd += (Number(rainOwn.innerHTML)*1000000)*percent
+    money += forEnd/10
 }
 
 //this is for the pop up harvest the little button that might be broken that I don't care enough to fix rn
