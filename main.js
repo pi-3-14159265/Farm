@@ -20,8 +20,33 @@ ras: raspberry
 peach: peach
 gold: golden harvest
 MpS: Money Per Second
-
+item_upp: item upgrade price
+item-upp-own-var: ups you own
 */
+let rainUppPrice = document.getElementById("rain_upp");
+let rainUppOwn = document.getElementById("rain-upp-own-var");
+let starUppPrice = document.getElementById("star_upp");
+let starUppOwn = document.getElementById("star-upp-own-var");
+let bioUppPrice = document.getElementById("bio_upp");
+let bioUppOwn = document.getElementById("bio-upp-own-var");
+let cocoUppPrice = document.getElementById("coco_upp");
+let cocoUppOwn = document.getElementById("coco-upp-own-var");
+let applUppPrice = document.getElementById("appl_upp");
+let applUppOwn = document.getElementById("appl-upp-own-var");
+let peachUppPrice = document.getElementById("peach_upp");
+let peachUppOwn = document.getElementById("peach-upp-own-var");
+let rasUppPrice = document.getElementById("ras_upp");
+let rasUppOwn = document.getElementById("ras-upp-own-var");
+let tomatoUppPrice = document.getElementById("tomato_upp");
+let tomatoUppOwn = document.getElementById("tomato-upp-own-var");
+let riceUppPrice = document.getElementById("rice_upp");
+let riceUppOwn = document.getElementById("rice-upp-own-var");
+let milkUppPrice = document.getElementById("milk_upp");
+let milkUppOwn = document.getElementById("milk-upp-own-var");
+let grainUppPrice = document.getElementById("grain_upp");
+let grainUppOwn = document.getElementById("grain-upp-own-var");
+let chicUppPrice = document.getElementById("chic_upp");
+let chicUppOwn = document.getElementById("chic-upp-own-var");
 let chicPrice = document.getElementById("chic-price");
 let chicOwn = document.getElementById("chic-own");
 let applPrice = document.getElementById("appl-price");
@@ -42,6 +67,14 @@ let peachPrice = document.getElementById("Peach-price");
 let peachOwn = document.getElementById("Peach-own");
 let goldPrice = document.getElementById("gold-price");
 let goldOwn = document.getElementById("gold-own");
+let rainPrice = document.getElementById("rain-price");
+let rainOwn = document.getElementById("rain-own");
+let cocoPrice = document.getElementById("coco-price");
+let cocoOwn = document.getElementById("coco-own");
+let starPrice = document.getElementById("star-price");
+let starOwn = document.getElementById("star-own");
+let bioPrice = document.getElementById("bio-price");
+let bioOwn = document.getElementById("bio-own");
 let muti = "1";//unused
 let buildingsOwn = 0;//kinda used might be broken
 let timeBeforVanish = 7000;//unused
@@ -116,38 +149,66 @@ function press() {
     //but I didn't so yhea...
     if (money >= 80 || Number(chicOwn.innerHTML) > 0) {
         document.getElementById("chic").style.visibility = "visible"
+        document.getElementById("chic-upp").style.visibility = "visible"
         //document.getElementById("chic-own-tag").style.visibility = "visible"
     } 
     if (money >= 800 || Number(grainOwn.innerHTML) > 0) {
         document.getElementById("grain").style.visibility = "visible"
+        document.getElementById("grain-upp").style.visibility = "visible"
         //document.getElementById("grain-own-tag").style.visibility = "visible"
     } 
     if (money >= 8000 || Number(milkOwn.innerHTML) > 0) {
         document.getElementById("milk").style.visibility = "visible"
+        document.getElementById("milk-upp").style.visibility = "visible"
         //document.getElementById("milk-own-tag").style.visibility = "visible"
     } 
     if (money >= 30000 || Number(riceOwn.innerHTML) > 0) {
         document.getElementById("rice").style.visibility = "visible"
+        document.getElementById("rice-upp").style.visibility = "visible"
         //document.getElementById("rice-own-tag").style.visibility = "visible"
     } 
     if (money >= 80000 || Number(tomatoOwn.innerHTML) > 0) {
         document.getElementById("tomato").style.visibility = "visible"
+        document.getElementById("tomato-upp").style.visibility = "visible"
         //document.getElementById("tomato-own-tag").style.visibility = "visible"
     } 
     if (money >= 400000 || Number(rasOwn.innerHTML) > 0) {
         document.getElementById("ras").style.visibility = "visible"
+        document.getElementById("ras-upp").style.visibility = "visible"
         //document.getElementById("ras-own-tag").style.visibility = "visible"
     } 
     if (money >= 800000 || Number(peachOwn.innerHTML) > 0) {
         document.getElementById("peach").style.visibility = "visible"
+        document.getElementById("peach-upp").style.visibility = "visible"
         //document.getElementById("peach-own-tag").style.visibility = "visible"
     } 
-    if (money >= 80000000 || Number(goldOwn.innerHTML) > 0) {
-        document.getElementById("gold").style.visibility = "visible"
+    //if (money >= 80000000 || Number(goldOwn.innerHTML) > 0) {
+        //document.getElementById("gold").style.visibility = "visible"
         //document.getElementById("gold-own-tag").style.visibility = "visible"
-    } 
+    //} 
     if (money >= 8000000 || Number(applOwn.innerHTML) > 0) {
         document.getElementById("appl").style.visibility = "visible"
+        document.getElementById("appl-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 40000000 || Number(cocoOwn.innerHTML) > 0) {
+        document.getElementById("coco").style.visibility = "visible"
+        document.getElementById("coco-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 80000000 || Number(bioOwn.innerHTML) > 0) {
+        document.getElementById("bio").style.visibility = "visible"
+        document.getElementById("bio-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 40000000 || Number(starOwn.innerHTML) > 0) {
+        document.getElementById("star").style.visibility = "visible"
+        document.getElementById("star-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 800000000 || Number(rainOwn.innerHTML) > 0) {
+        document.getElementById("rain").style.visibility = "visible"
+        document.getElementById("rain-upp").style.visibility = "visible"
         //document.getElementById("gold-own-tag").style.visibility = "visible"
     } 
         ////this was for an animation that never happened 
@@ -290,6 +351,20 @@ function buyItem(price, own, value) {
         console.log("something went wrong")
     }
 }
+
+function buyUpp(price,own) {
+    if (money >= price.innerHTML) {
+        console.log("try")
+        money -= Number(price.innerHTML)
+        updateMoney()
+        own.innerHTML = Number(eval(own.innerHTML+"+1"));
+        own.innerHTML = own.innerHTML
+        price.innerHTML = Math.ceil(Number(price.innerHTML)*2.56)//one of my fav numbers XD
+    } else {
+        console.log("Something Bad Happened")
+    }
+}
+
 
 //this refers to upgrading the main item (the thing that you click)
 function upp() {
@@ -467,7 +542,7 @@ function news() {
         newsBanner.innerHTML = "Competing farm goes bankrupt";
     }
     if (story == 18) {
-        newsBanner.innerHTML = "You wonder what's on line 470";//lol looked
+        newsBanner.innerHTML = "You wonder what's on line 545";//lol looked
     }
     if (story == 19) {
         if (Number(buildingsOwn) > 10) {
@@ -735,6 +810,22 @@ function MpS_count() {
     updateMoney()
 }
 
+function UppAdd() {
+    //money += (Number(chicOwn)*base_price)*1.1//10%
+    money += (Number(chicOwn.innerHTML)*1)*1.17
+    money += (Number(grainOwn.innerHTML)*10)*1.17
+    money += (Number(milkOwn.innerHTML)*50)*1.17
+    money += (Number(riceOwn.innerHTML)*100)*1.17
+    money += (Number(tomatoOwn.innerHTML)*500)*1.17
+    money += (Number(rasOwn.innerHTML)*1000)*1.17
+    money += (Number(peachOwn.innerHTML)*5000)*1.17
+    money += (Number(applOwn.innerHTML)*10000)*1.17
+    money += (Number(cocoOwn.innerHTML)*50000)*1.17
+    money += (Number(bioOwn.innerHTML)*100000)*1.17
+    money += (Number(starOwn.innerHTML)*500000)*1.17
+    money += (Number(rainOwn.innerHTML)*1000000)*1.17
+}
+
 //this is for the pop up harvest the little button that might be broken that I don't care enough to fix rn
 function harvestClick() {
     document.getElementById("harvest").style.visibility = "hidden"
@@ -776,4 +867,5 @@ function buyGold() {
 setInterval(MpS_count,100)
 setInterval(news,4000)
 setInterval(harvest,(70+Math.floor(Math.random()*20))*1000)
+setInterval(UppAdd,1000)
 //setInterval(saveData, 20000)
