@@ -877,6 +877,7 @@ function UppAdd() {
         forEnd += Number(rainOwn.innerHTML)*1000000
     }
     money = Number(money)+forEnd/10
+    MpS.innerHTML = String((Math.round(forEnd*100))/100)
 }
 
 //this is for the pop up harvest the little button that might be broken that I don't care enough to fix rn
