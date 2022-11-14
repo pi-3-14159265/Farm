@@ -802,8 +802,8 @@ function recoverData() {
     rainUppOwn.innerHTML = localStorage.getItem("rainUppOwn")
     rainUppPrice.innerHTML = localStorage.getItem("rainUppPrice")
     document.getElementById("click-me").src = localStorage.getItem("clickMePic")
-    goldPrice.innerHTML = localStorage.getItem("goldPrice")
-    goldOwn.innerHTML = localStorage.getItem("goldOwn")
+    //goldPrice.innerHTML = localStorage.getItem("goldPrice")
+    //goldOwn.innerHTML = localStorage.getItem("goldOwn")
     MpS_muti = Number(localStorage.getItem("mps_muti"))
 }
 
@@ -839,8 +839,8 @@ function saveData() {
     localStorage.setItem("rainPrice",rainPrice.innerHTML)
     localStorage.setItem("clickMePic", document.getElementById("click-me").src)
     localStorage.setItem("upgradePrice",upgradeCost.innerHTML)
-    localStorage.setItem("goldPrice",goldPrice.innerHTML)
-    localStorage.setItem("goldOwn",goldOwn.innerHTML)
+    //localStorage.setItem("goldPrice",goldPrice.innerHTML)
+    //localStorage.setItem("goldOwn",goldOwn.innerHTML)
     localStorage.setItem("mps_muti", String(MpS_muti))
     localStorage.setItem("chicUppOwn",chicUppOwn.innerHTML)
     localStorage.setItem("chicUppPrice",chicUppPrice.innerHTML)
