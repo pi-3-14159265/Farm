@@ -3,6 +3,15 @@
     text-align: right;
 }
 
+.sec-cells {
+    padding-left: 50px;
+    text-align: left;
+}
+
+.reg-bg:hover {
+    border: 1px;
+}
+
 .upp:hover {
     border: 1px;
 }
@@ -10,19 +19,27 @@
 #main {
     position: relative;
     bottom: 471px;
-	left: 690px;
+	left: 730px;
 }
 /*
 #news-holder {
     margin-right: 1000px;
 }
 */
+#upp-loc {
+    position: relative;
+    left: 550px;
+    bottom: 1250px;
+}
 #news-location {
     position: relative;
-    left: 360px;
-    bottom: 1060px;
+    left: 280px;
+    bottom: 2025px;
 }
 #grain-own-tag {
+    visibility: hidden;
+}
+.hide {
     visibility: hidden;
 }
 #milk-own-tag {
@@ -49,7 +66,18 @@
 #harvest {
     visibility: hidden;
 }
-
+#rain-own-tag {
+    visibility: hidden;
+}
+#bio-own-tag {
+    visibility: hidden;
+}
+#star-own-tag {
+    visibility: hidden;
+}
+#coco-own-tag {
+    visibility: hidden;
+}
 body {
     font-family: "Lucida Console", monospace;
     background-image: url(bg.png);
@@ -59,6 +87,10 @@ body {
     border-radius: 10px;
     background-color: rgb(151, 142, 142);
     visibility: hidden;
+}
+.reg-bg {
+    border-radius: 10px;
+    background-color: rgb(151, 142, 142);
 }
 #appl {
     border-radius: 10px;
@@ -109,6 +141,30 @@ body {
     border-radius: 10px;
 }
 #grain {
+    visibility: hidden;
+    font-size: 14px;
+    background-color: rgb(151, 142, 142);
+    border-radius: 10px;
+}
+#rain {
+    visibility: hidden;
+    font-size: 14px;
+    background-color: rgb(151, 142, 142);
+    border-radius: 10px;
+}
+#star {
+    visibility: hidden;
+    font-size: 14px;
+    background-color: rgb(151, 142, 142);
+    border-radius: 10px;
+}
+#bio {
+    visibility: hidden;
+    font-size: 14px;
+    background-color: rgb(151, 142, 142);
+    border-radius: 10px;
+}
+#coco {
     visibility: hidden;
     font-size: 14px;
     background-color: rgb(151, 142, 142);
