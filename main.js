@@ -90,7 +90,7 @@ let MpS_muti = 0;//use this in the form of a decimal to add to the total mps cou
 
 //we use this to update our money its very useful
 function updateMoney() {
-    document.getElementById('total-money').innerHTML = money;
+    document.getElementById('total-money').innerHTML = (Math.round(money*100))/100;
 }
 /*
 //unused function because animation wasn't working
@@ -133,15 +133,15 @@ function nonHover(tag) {
 function press() {
     if (itemType === 'Egg') {
         money = Number(eval(money+"+1"+"*"+muti));
-        document.getElementById('total-money').innerHTML = money;
+        updateMoney()
     }
     if (itemType === "Grain") {
         money = Number(eval(money+"+5"+"*"+muti));
-        document.getElementById('total-money').innerHTML = money;
+        updateMoney()
     }
     if (itemType === "Corn") {
         money = Number(eval(money+"+10"+"*"+muti));
-        document.getElementById('total-money').innerHTML = money;
+        updateMoney()
     }
 
 
@@ -806,27 +806,77 @@ function saveData() {
 //I want to store the data via using the item number
 function MpS_count() {
     //money += ((MpS_muti*((Number(chicOwn.innerHTML)*(1+chicMuti))+(Number(grainOwn.innerHTML)*(5+grainMuti))+(Number(milkOwn.innerHTML)*(10+milkMuti))+(Number(riceOwn.innerHTML)*(15+riceMuti))+(Number(tomatoOwn.innerHTML)*(30+tomatoMuti))+(Number(rasOwn.innerHTML)*(50+rasMuti))+(Number(peachOwn.innerHTML)*(100+peachMuti))))/10)
-    money = (Math.round((((Number(MpS.innerHTML)*(MpS_muti+1))/10)+Number(money))*100))/100
+    //money = (Math.round((((Number(MpS.innerHTML)*(MpS_muti+1))/10)+Number(money))*100))/100
     updateMoney()
 }
 
 function UppAdd() {
     //money += (Number(chicOwn)*base_price)*1.1//10%
-    const percent = 1.70
+    // WE NEED TO ADD THE TIME UPGRADE IN ORDER TO BE OF VALUE
+    //
+    const percent = 1.1
     let forEnd = 0
-    forEnd += (Number(chicOwn.innerHTML)*1)*percent
-    forEnd += (Number(grainOwn.innerHTML)*10)*percent
-    forEnd += (Number(milkOwn.innerHTML)*50)*percent
-    forEnd += (Number(riceOwn.innerHTML)*100)*percent
-    forEnd += (Number(tomatoOwn.innerHTML)*500)*percent
-    forEnd += (Number(rasOwn.innerHTML)*1000)*percent
-    forEnd += (Number(peachOwn.innerHTML)*5000)*percent
-    forEnd += (Number(applOwn.innerHTML)*10000)*percent
-    forEnd += (Number(cocoOwn.innerHTML)*50000)*percent
-    forEnd += (Number(bioOwn.innerHTML)*100000)*percent
-    forEnd += (Number(starOwn.innerHTML)*500000)*percent
-    forEnd += (Number(rainOwn.innerHTML)*1000000)*percent
-    money += forEnd/10
+    if (Number(chicUppOwn.innerHTML) != 0) {
+        forEnd += (Number(chicOwn.innerHTML)*1)*(percent*Number(chicUppOwn.innerHTML))
+    } else {
+        forEnd += Number(chicOwn.innerHTML)*1
+    }
+    if (Number(grainUppOwn != 0)) {
+        forEnd += (Number(grainOwn.innerHTML)*10)*(percent*Number(grainUppOwn.innerHTML))
+    } else {
+        forEnd += Number(grainOwn.innerHTML)*10
+    }
+    if (Number(milkUppOwn != 0)) {
+        forEnd += (Number(milkOwn.innerHTML)*50)*(percent*Number(milkUppOwn.innerHTML))
+    } else {
+        forEnd += Number(milkOwn.innerHTML)*50
+    }
+    if (Number(riceUppOwn != 0)) {
+        forEnd += (Number(riceOwn.innerHTML)*100)*(percent*Number(riceUppOwn.innerHTML))
+    } else {
+        forEnd += Number(riceOwn.innerHTML)*100
+    }
+    if (Number(tomatoUppOwn != 0)) {
+        forEnd += (Number(tomatoOwn.innerHTML)*500)*(percent*Number(tomatoUppOwn.innerHTML))
+    } else {
+        forEnd += Number(tomatoOwn.innerHTML)*500
+    }
+    if (Number(rasUppOwn != 0)) {
+        forEnd += (Number(rasOwn.innerHTML)*1000)*(percent*Number(rasUppOwn.innerHTML))
+    } else {
+        forEnd += Number(rasOwn.innerHTML)*1000
+    }
+    if (Number(peachUppOwn != 0)) {
+        forEnd += (Number(peachOwn.innerHTML)*5000)*(percent*Number(peachUppOwn.innerHTML))
+    } else {
+        forEnd += Number(peachOwn.innerHTML)*5000
+    }
+    if (Number(applUppOwn != 0)) {
+        forEnd += (Number(applOwn.innerHTML)*10000)*(percent*Number(applUppOwn.innerHTML))
+    } else {
+        forEnd += Number(applOwn.innerHTML)*10000
+    }
+    if (Number(cocoUppOwn != 0)) {
+        forEnd += (Number(cocoOwn.innerHTML)*50000)*(percent*Number(cocoUppOwn.innerHTML))
+    } else {
+        forEnd += Number(cocoOwn.innerHTML)*50000
+    }
+    if (Number(grainUppOwn != 0)) {
+        forEnd += (Number(bioOwn.innerHTML)*100000)*(percent*Number(bioUppOwn.innerHTML))
+    } else {
+        forEnd += Number(bioOwn.innerHTML)*100000
+    }
+    if (Number(starUppOwn != 0)) {
+        forEnd += (Number(starOwn.innerHTML)*500000)*(percent*Number(starUppOwn.innerHTML))
+    } else {
+        forEnd += Number(starOwn.innerHTML)*500000
+    }
+    if (Number(grainUppOwn != 0)) {
+        forEnd += (Number(rainOwn.innerHTML)*1000000)*(percent*Number(rainUppOwn.innerHTML))
+    } else {
+        forEnd += Number(rainOwn.innerHTML)*1000000
+    }
+    money = Number(money)+forEnd/10
 }
 
 //this is for the pop up harvest the little button that might be broken that I don't care enough to fix rn
