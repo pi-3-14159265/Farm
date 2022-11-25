@@ -147,6 +147,7 @@ function press() {
 
     //checking wheatear to display vars yhea I know I could make a function that dose this
     //but I didn't so yhea...
+    /*
     if (money >= 80 || Number(chicOwn.innerHTML) > 0) {
         document.getElementById("chic").style.visibility = "visible"
         document.getElementById("chic-upp").style.visibility = "visible"
@@ -211,6 +212,7 @@ function press() {
         document.getElementById("rain-upp").style.visibility = "visible"
         //document.getElementById("gold-own-tag").style.visibility = "visible"
     } 
+    */
         ////this was for an animation that never happened 
         //killClones()
         //let randint = Math.floor(Math.random() * 21);
@@ -985,9 +987,77 @@ function buyGold() {
     }
 }
 
+function showCheck() {
+    if (money >= 80 || Number(chicOwn.innerHTML) > 0) {
+        document.getElementById("chic").style.visibility = "visible"
+        document.getElementById("chic-upp").style.visibility = "visible"
+        //document.getElementById("chic-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 800 || Number(grainOwn.innerHTML) > 0) {
+        document.getElementById("grain").style.visibility = "visible"
+        document.getElementById("grain-upp").style.visibility = "visible"
+        //document.getElementById("grain-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 8000 || Number(milkOwn.innerHTML) > 0) {
+        document.getElementById("milk").style.visibility = "visible"
+        document.getElementById("milk-upp").style.visibility = "visible"
+        //document.getElementById("milk-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 30000 || Number(riceOwn.innerHTML) > 0) {
+        document.getElementById("rice").style.visibility = "visible"
+        document.getElementById("rice-upp").style.visibility = "visible"
+        //document.getElementById("rice-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 80000 || Number(tomatoOwn.innerHTML) > 0) {
+        document.getElementById("tomato").style.visibility = "visible"
+        document.getElementById("tomato-upp").style.visibility = "visible"
+        //document.getElementById("tomato-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 400000 || Number(rasOwn.innerHTML) > 0) {
+        document.getElementById("ras").style.visibility = "visible"
+        document.getElementById("ras-upp").style.visibility = "visible"
+        //document.getElementById("ras-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 800000 || Number(peachOwn.innerHTML) > 0) {
+        document.getElementById("peach").style.visibility = "visible"
+        document.getElementById("peach-upp").style.visibility = "visible"
+        //document.getElementById("peach-own-tag").style.visibility = "visible"
+    } 
+    //if (money >= 80000000 || Number(goldOwn.innerHTML) > 0) {
+        //document.getElementById("gold").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    //} 
+    if (money >= 8000000 || Number(applOwn.innerHTML) > 0) {
+        document.getElementById("appl").style.visibility = "visible"
+        document.getElementById("appl-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 40000000 || Number(cocoOwn.innerHTML) > 0) {
+        document.getElementById("coco").style.visibility = "visible"
+        document.getElementById("coco-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 80000000 || Number(bioOwn.innerHTML) > 0) {
+        document.getElementById("bio").style.visibility = "visible"
+        document.getElementById("bio-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 40000000 || Number(starOwn.innerHTML) > 0) {
+        document.getElementById("star").style.visibility = "visible"
+        document.getElementById("star-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+    if (money >= 800000000 || Number(rainOwn.innerHTML) > 0) {
+        document.getElementById("rain").style.visibility = "visible"
+        document.getElementById("rain-upp").style.visibility = "visible"
+        //document.getElementById("gold-own-tag").style.visibility = "visible"
+    } 
+}
+
 //the intervals as promised 
 setInterval(MpS_count,100)
 setInterval(news,4000)
 setInterval(harvest,(70+Math.floor(Math.random()*20))*1000)
 setInterval(UppAdd,100)
+setInterval(showCheck,100)
 //setInterval(saveData, 20000)
